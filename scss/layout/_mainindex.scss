@@ -1,0 +1,105 @@
+
+
+    .buffer {
+        transform: translateY(-60%);
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 100%;
+        height: 550px;
+        display: flex;
+        justify-content: space-around;
+        z-index: 1;
+
+        a {
+            img {
+                height: 550px;
+                width: 630px;
+            }
+        }
+    }
+
+    .tituloi {
+        margin-top: 0;
+        text-align: center;
+        width: 100%;
+        height: 41px;
+        padding-top: 20px;
+        margin-bottom: 0;
+
+        .bordet {
+            font-family: "Fauna One", serif;
+            font-size: 23px;
+            text-decoration: none;
+            padding: 13px;
+            color: rgba(0, 0, 0, 0.827);
+            vertical-align: center;
+            border-bottom: 1px solid rgba(122, 120, 120, 0.811);
+
+            &:hover {
+                color: rgb(0, 0, 0);
+            }
+        }
+    }
+
+    .grid {
+        margin-top: 300px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* Cuatro columnas iguales */
+        grid-template-rows: repeat(4, auto);
+        /* Cuatro filas automáticas */
+        gap: 20px;
+        /* Espacio entre las celdas del grid */
+
+        .producto {
+            width: 300px;
+            height: 388px;
+            display: flex;
+            flex-direction: column;
+
+            .p-img {
+                position: relative;
+                height: 300px;
+                width: 300px;
+                .off {
+                    position: absolute;
+                    /* Posiciona de forma absoluta con respecto al padre */
+                    top: 0;
+                    /* Lo sitúa en la parte superior */
+                    left: 0;
+                    /* Lo sitúa en la parte izquierda */
+                    background-color: red;
+                    color: white;
+                    width: 70px;
+                    height: 25px;
+                }
+                .img.pro{
+                    height: 300px;
+                    width: 300px;
+                }
+                .lupa{
+                    position: absolute;
+                    /* Posiciona de forma absoluta con respecto al padre */
+                    bottom: 0;
+                    /* Lo sitúa en la parte inferior */
+                    right: 0;
+                    /* Lo sitúa en la parte derecha */
+                    /* Ajusta cualquier otro estilo según sea necesario */
+                    color: #575656;
+                    width: 44px;
+                    height: 44px;
+                    display: none;
+                  
+                    &:hover{
+                        background-color: #555;
+                        color: #292727;
+                        border-radius: 50%;
+                        display: block;
+                    }
+                }
+
+            }
+        }
+
+    }

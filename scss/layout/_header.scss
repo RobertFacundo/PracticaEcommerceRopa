@@ -1,0 +1,231 @@
+header {
+    display: flex;
+    flex-direction: column;
+
+    .topbar {
+        height: 39px;
+        background-color: rgba(0, 0, 0, 0.618);
+        margin: 0;
+        padding: 0;
+
+        p {
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            line-height: 18px;
+            padding-top: 10px;
+        }
+    }
+
+    .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 79px;
+        height: 137px;
+
+
+
+        .logo {
+
+            img {
+                padding: 23px;
+                height: 50px;
+                width: 235px; // Establece el ancho máximo del logo
+            }
+        }
+
+        .search {
+            position: relative;
+            display: inline-block;
+
+            input {
+                height: 39px;
+                width: 632px;
+                padding: 5px 10px;
+                border-radius: 50px;
+                border: 1px solid rgba(165, 164, 164, 0.474);
+
+                &:focus {
+                    border-color: rgba(122, 120, 120, 0.811);
+                    outline: none; // Elimina el contorno predeterminado al hacer clic en el input
+                }
+            }
+
+            .fa-search {
+                position: absolute;
+                padding-right: 13px;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #555;
+                pointer-events: none;
+            }
+        }
+
+        .links {
+            ul {
+                display: flex;
+                list-style: none;
+                align-items: center;
+                text-decoration: none;
+                padding: 0;
+
+                li {
+                    margin-right: 40px; // Ajusta el espacio entre los elementos de la lista
+                    font-family: "Fauna One", serif;
+                    font-weight: 800;
+
+                    a {
+                        width: 90px;
+                        height: 50px;
+                        font-size: 20px;
+                        text-decoration: none;
+                        color: rgba(0, 0, 0, 0.827);
+
+                        &:hover {
+                            color: rgb(0, 0, 0);
+                        }
+                    }
+
+                    .button {
+                        background-color: transparent; // Establece el color de fondo del botón como transparente
+                        border: none; // Elimina el borde del botón
+                        padding: 0; // Elimina el relleno del botón
+                        cursor: pointer; // Establece el cursor al pasar el ratón sobre el botón
+                        display: flex; // Permite alinear verticalmente el texto e icono dentro del botón
+                        height: 50px;
+                        align-items: center;
+
+                        span {
+                            padding-right: 10px; // Añade un pequeño margen entre el texto y el icono
+                            font-size: 20px;
+                            font-family: "Fauna One", serif;
+                            font-weight: 800;
+                            color: rgba(0, 0, 0, 0.685);
+
+                            &:hover {
+                                color: rgb(0, 0, 0);
+                            }
+                        }
+
+                        .fa-cart-shopping {
+                            padding: 0px 10px;
+                            font-size: 20px; // Ajusta el tamaño del icono según sea necesario
+                        }
+
+                        .item-counter {
+                            // display: none;
+                            position: absolute; // Posiciona el contador de elementos
+                            right: 103px; // Ajusta la posición horizontal del contador
+                            background-color: rgb(221, 68, 68); // Color de fondo del contador
+                            color: white; // Color de texto del contador
+                            border-radius: 50%; // Estilo de borde redondeado
+                            padding: 5px; // Espacio alrededor del contenido del contador
+                            font-size: 0.8em; // Tamaño del texto del contador
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Opcional: Agregar estilos para el menú de navegación
+    .nav {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+
+        .navl {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            font-family: "Fauna One", serif;
+            font-size: 23px;
+
+            li {
+                margin-right: 20px; // Ajusta el espacio entre los elementos de la lista
+
+                a {
+                    text-decoration: none;
+                    font-weight: 800;
+                    color: rgba(0, 0, 0, 0.685);
+
+                    &:hover {
+                        color: rgb(0, 0, 0);
+                    }
+
+                    span {
+                        padding: 13px;
+                    }
+                }
+            }
+
+        }
+        
+
+        .ddmm {
+            visibility: hidden;
+            background-color: white;
+            width: 1100px;
+            height: 310px;
+            border: 1px solid rgba(165, 164, 164, 0.474);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-family: "Fauna One", serif;
+            margin-top: 5px; // Ajusta según sea necesario
+            margin-left: auto; // Centra horizontalmente el elemento
+            margin-right: auto; // Centra horizontalmente el elemento
+
+            z-index: 2;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+
+
+                .titulol {
+                    padding-top: 15px;
+                    font-weight: 800;
+                    font-size: 27px;
+                    text-decoration: none;
+                    color: rgba(0, 0, 0, 0.685);
+                    &:hover{
+                        color: rgb(0, 0, 0);
+                    }
+
+                }
+
+                .hr {
+                    width: 90%;
+                    height: 1px;
+                    margin-top: 10px;
+                    margin-left: 0px;
+                    background-color: rgba(122, 120, 120, 0.811);
+                    text-align: left;
+                }
+
+                li {
+                    padding-top: 5px;
+                    a {
+                        padding-top: 15px;
+                        font-weight: 800;
+                        font-size: 16px;
+                        text-decoration: none;
+                        color: rgba(86, 81, 81, 0.477); 
+                        &:hover{
+                            color: rgb(86, 81, 81); 
+                        }
+                    }
+                }
+            }
+            &.visible {
+                visibility: visible;
+            }
+        }
+    }
+}
