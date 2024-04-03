@@ -1,0 +1,86 @@
+.footer {
+    height: 406px;
+    background-color: #232323;
+    color: white;
+    padding: 10px 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: "Fauna One", serif;
+
+    .footer-sec {
+        padding: 10px;
+        margin: 0px 30px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        ul {
+            list-style-type: none;
+
+            a {
+                width: 100%;
+                font-weight: 700;
+                text-decoration: none;
+
+                li {
+                    color: rgba(255, 255, 255, 0.616);
+                    font-size: 16px;
+                    padding-top: 5px;
+                    font-weight: 300;
+                    &:hover{
+                        color: white;
+                    }
+                }
+
+            }
+        }
+
+       
+
+        p {
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+
+        section {
+
+            input {
+                height: 27px;
+                width: 350px;
+                padding: 5px 10px;
+                border-radius: 50px;
+                color: white;
+                border: 1px solid rgba(165, 164, 164, 0.474);
+                background-color: transparent;
+            }
+        }
+        .iconos{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 13px;
+            font-size: 23px;
+        }
+    }
+    .footer-img{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        a {
+            .dataimg {
+                width: 40px;
+                height: 50px;
+                float: center;
+                padding-top: 30px;
+            }
+        }
+        h3{
+            padding: 30px;
+        }
+    }
+}

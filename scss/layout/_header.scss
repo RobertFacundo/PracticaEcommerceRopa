@@ -4,6 +4,7 @@ header {
     height: 800px;
     margin-bottom: 0;
     padding-bottom: 0;
+
     .topbar {
         height: 39px;
         background-color: rgba(0, 0, 0, 0.618);
@@ -13,7 +14,7 @@ header {
         p {
             color: white;
             text-align: center;
-            
+
             font-size: 18px;
             line-height: 39px;
             padding-top: px;
@@ -136,7 +137,7 @@ header {
 
     // Opcional: Agregar estilos para el menú de navegación
     .nav {
-       position: relative;
+        position: relative;
         justify-content: center;
         display: flex;
         flex-direction: column;
@@ -173,27 +174,27 @@ header {
             }
 
         }
-        
+
 
         .ddmm {
             position: absolute; // Hace que el menú desplegable sea posicionado absolutamente
             top: calc(100% + 10px); // Coloca el menú justo debajo del menú principal
-           
+
             z-index: 2; // Asegura que el menú desplegable esté por encima del buffer
             display: none; // Oculta el menú desplegable por defecto
             background-color: white;
             width: 1100px;
             height: 310px;
             border: 1px solid rgba(165, 164, 164, 0.474);
-            
-          
+
+
             justify-content: space-around;
             font-family: "Fauna One", serif;
             margin-top: 0px; // Ajusta según sea necesario
             margin-left: 200px; // Centra horizontalmente el elemento
-           
 
-           
+
+
 
             ul {
                 display: flex;
@@ -207,7 +208,8 @@ header {
                     font-size: 27px;
                     text-decoration: none;
                     color: rgba(0, 0, 0, 0.685);
-                    &:hover{
+
+                    &:hover {
                         color: rgb(0, 0, 0);
                     }
 
@@ -224,35 +226,38 @@ header {
 
                 li {
                     padding-top: 5px;
+
                     a {
                         padding-top: 15px;
                         font-weight: 800;
                         font-size: 16px;
                         text-decoration: none;
-                        color: rgba(86, 81, 81, 0.477); 
-                        &:hover{
-                            color: rgb(86, 81, 81); 
+                        color: rgba(86, 81, 81, 0.477);
+
+                        &:hover {
+                            color: rgb(86, 81, 81);
                         }
                     }
                 }
             }
+
             &.visible {
                 display: flex;
             }
         }
-       
     }
+
     .buffer {
         position: relative;
         z-index: 1;
-        
+
         margin-top: 30px;
         margin-bottom: 0px;
         width: 100%;
         height: 550px;
         display: flex;
         justify-content: space-around;
-        
+
 
         a {
             img {
