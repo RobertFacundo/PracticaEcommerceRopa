@@ -410,23 +410,77 @@ header {
         .main .filtros .ddf .talles.mostrar {
           display: flex;
           /* Muestra los talles */ }
-      .main .filtros .ddf .marcas, .main .filtros .ddf .colores, .main .filtros .ddf .materiales {
+      .main .filtros .ddf .marcas,
+      .main .filtros .ddf .colores,
+      .main .filtros .ddf .materiales {
         display: none;
         flex-direction: column; }
-        .main .filtros .ddf .marcas .marca-label, .main .filtros .ddf .marcas .color-label, .main .filtros .ddf .marcas .material-label, .main .filtros .ddf .colores .marca-label, .main .filtros .ddf .colores .color-label, .main .filtros .ddf .colores .material-label, .main .filtros .ddf .materiales .marca-label, .main .filtros .ddf .materiales .color-label, .main .filtros .ddf .materiales .material-label {
+        .main .filtros .ddf .marcas .marca-label,
+        .main .filtros .ddf .marcas .color-label,
+        .main .filtros .ddf .marcas .material-label,
+        .main .filtros .ddf .colores .marca-label,
+        .main .filtros .ddf .colores .color-label,
+        .main .filtros .ddf .colores .material-label,
+        .main .filtros .ddf .materiales .marca-label,
+        .main .filtros .ddf .materiales .color-label,
+        .main .filtros .ddf .materiales .material-label {
           padding: 10px;
           display: flex;
           align-items: center;
           cursor: pointer; }
-          .main .filtros .ddf .marcas .marca-label input[type="checkbox"], .main .filtros .ddf .marcas .color-label input[type="checkbox"], .main .filtros .ddf .marcas .material-label input[type="checkbox"], .main .filtros .ddf .colores .marca-label input[type="checkbox"], .main .filtros .ddf .colores .color-label input[type="checkbox"], .main .filtros .ddf .colores .material-label input[type="checkbox"], .main .filtros .ddf .materiales .marca-label input[type="checkbox"], .main .filtros .ddf .materiales .color-label input[type="checkbox"], .main .filtros .ddf .materiales .material-label input[type="checkbox"] {
+          .main .filtros .ddf .marcas .marca-label input[type="checkbox"],
+          .main .filtros .ddf .marcas .color-label input[type="checkbox"],
+          .main .filtros .ddf .marcas .material-label input[type="checkbox"],
+          .main .filtros .ddf .colores .marca-label input[type="checkbox"],
+          .main .filtros .ddf .colores .color-label input[type="checkbox"],
+          .main .filtros .ddf .colores .material-label input[type="checkbox"],
+          .main .filtros .ddf .materiales .marca-label input[type="checkbox"],
+          .main .filtros .ddf .materiales .color-label input[type="checkbox"],
+          .main .filtros .ddf .materiales .material-label input[type="checkbox"] {
             margin-right: 10px;
             cursor: pointer; }
-          .main .filtros .ddf .marcas .marca-label .brand-name, .main .filtros .ddf .marcas .marca-label .color-name, .main .filtros .ddf .marcas .marca-label .material-name, .main .filtros .ddf .marcas .color-label .brand-name, .main .filtros .ddf .marcas .color-label .color-name, .main .filtros .ddf .marcas .color-label .material-name, .main .filtros .ddf .marcas .material-label .brand-name, .main .filtros .ddf .marcas .material-label .color-name, .main .filtros .ddf .marcas .material-label .material-name, .main .filtros .ddf .colores .marca-label .brand-name, .main .filtros .ddf .colores .marca-label .color-name, .main .filtros .ddf .colores .marca-label .material-name, .main .filtros .ddf .colores .color-label .brand-name, .main .filtros .ddf .colores .color-label .color-name, .main .filtros .ddf .colores .color-label .material-name, .main .filtros .ddf .colores .material-label .brand-name, .main .filtros .ddf .colores .material-label .color-name, .main .filtros .ddf .colores .material-label .material-name, .main .filtros .ddf .materiales .marca-label .brand-name, .main .filtros .ddf .materiales .marca-label .color-name, .main .filtros .ddf .materiales .marca-label .material-name, .main .filtros .ddf .materiales .color-label .brand-name, .main .filtros .ddf .materiales .color-label .color-name, .main .filtros .ddf .materiales .color-label .material-name, .main .filtros .ddf .materiales .material-label .brand-name, .main .filtros .ddf .materiales .material-label .color-name, .main .filtros .ddf .materiales .material-label .material-name {
+          .main .filtros .ddf .marcas .marca-label .brand-name,
+          .main .filtros .ddf .marcas .marca-label .color-name,
+          .main .filtros .ddf .marcas .marca-label .material-name,
+          .main .filtros .ddf .marcas .color-label .brand-name,
+          .main .filtros .ddf .marcas .color-label .color-name,
+          .main .filtros .ddf .marcas .color-label .material-name,
+          .main .filtros .ddf .marcas .material-label .brand-name,
+          .main .filtros .ddf .marcas .material-label .color-name,
+          .main .filtros .ddf .marcas .material-label .material-name,
+          .main .filtros .ddf .colores .marca-label .brand-name,
+          .main .filtros .ddf .colores .marca-label .color-name,
+          .main .filtros .ddf .colores .marca-label .material-name,
+          .main .filtros .ddf .colores .color-label .brand-name,
+          .main .filtros .ddf .colores .color-label .color-name,
+          .main .filtros .ddf .colores .color-label .material-name,
+          .main .filtros .ddf .colores .material-label .brand-name,
+          .main .filtros .ddf .colores .material-label .color-name,
+          .main .filtros .ddf .colores .material-label .material-name,
+          .main .filtros .ddf .materiales .marca-label .brand-name,
+          .main .filtros .ddf .materiales .marca-label .color-name,
+          .main .filtros .ddf .materiales .marca-label .material-name,
+          .main .filtros .ddf .materiales .color-label .brand-name,
+          .main .filtros .ddf .materiales .color-label .color-name,
+          .main .filtros .ddf .materiales .color-label .material-name,
+          .main .filtros .ddf .materiales .material-label .brand-name,
+          .main .filtros .ddf .materiales .material-label .color-name,
+          .main .filtros .ddf .materiales .material-label .material-name {
             font-weight: bold; }
-          .main .filtros .ddf .marcas .marca-label .counter, .main .filtros .ddf .marcas .color-label .counter, .main .filtros .ddf .marcas .material-label .counter, .main .filtros .ddf .colores .marca-label .counter, .main .filtros .ddf .colores .color-label .counter, .main .filtros .ddf .colores .material-label .counter, .main .filtros .ddf .materiales .marca-label .counter, .main .filtros .ddf .materiales .color-label .counter, .main .filtros .ddf .materiales .material-label .counter {
+          .main .filtros .ddf .marcas .marca-label .counter,
+          .main .filtros .ddf .marcas .color-label .counter,
+          .main .filtros .ddf .marcas .material-label .counter,
+          .main .filtros .ddf .colores .marca-label .counter,
+          .main .filtros .ddf .colores .color-label .counter,
+          .main .filtros .ddf .colores .material-label .counter,
+          .main .filtros .ddf .materiales .marca-label .counter,
+          .main .filtros .ddf .materiales .color-label .counter,
+          .main .filtros .ddf .materiales .material-label .counter {
             margin-left: auto;
             color: #777; }
-        .main .filtros .ddf .marcas.mostrar, .main .filtros .ddf .colores.mostrar, .main .filtros .ddf .materiales.mostrar {
+        .main .filtros .ddf .marcas.mostrar,
+        .main .filtros .ddf .colores.mostrar,
+        .main .filtros .ddf .materiales.mostrar {
           display: flex; }
       .main .filtros .ddf .precio {
         display: none;
@@ -561,6 +615,34 @@ header {
           color: rgba(238, 39, 39, 0.837); }
           .main .grid2 .producto .p-info .p-precio:hover {
             color: #ee2727; }
+        .main .grid2 .producto .p-info p {
+          display: none;
+          font-size: 23px; }
+    .main .grid2.list-view {
+      display: flex;
+      flex-direction: column; }
+      .main .grid2.list-view .producto {
+        width: 100%;
+        height: auto;
+        flex-direction: row; }
+        .main .grid2.list-view .producto .p-img {
+          height: 300px;
+          width: 300px;
+          border-right: none;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.074); }
+          .main .grid2.list-view .producto .p-img .lupa {
+            display: none; }
+        .main .grid2.list-view .producto .p-info {
+          width: calc(100% - 300px);
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.074); }
+          .main .grid2.list-view .producto .p-info p {
+            display: block;
+            font-size: 23px;
+            padding-top: 20px; }
 
 .footer {
   height: 406px;
