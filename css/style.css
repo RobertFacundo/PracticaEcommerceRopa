@@ -183,28 +183,202 @@ header {
       height: 550px;
       width: 630px; }
 
+.headerp {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  .headerp .topbarp {
+    height: 39px;
+    background-color: rgba(0, 0, 0, 0.618);
+    margin: 0;
+    padding: 0; }
+    .headerp .topbarp .p {
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      line-height: 39px;
+      padding-top: px; }
+  .headerp .sectionp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    height: 137px; }
+    .headerp .sectionp .logop img {
+      padding: 23px;
+      height: 50px;
+      width: 235px; }
+    .headerp .sectionp .searchp {
+      position: relative;
+      display: inline-block; }
+      .headerp .sectionp .searchp .inputp {
+        height: 39px;
+        width: 632px;
+        padding: 5px 10px;
+        border-radius: 50px;
+        border: 1px solid rgba(165, 164, 164, 0.474); }
+        .headerp .sectionp .searchp .inputp:focus {
+          border-color: rgba(122, 120, 120, 0.811);
+          outline: none; }
+      .headerp .sectionp .searchp .fa-search {
+        position: absolute;
+        padding-right: 5px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #555;
+        pointer-events: none; }
+    .headerp .sectionp .linksp ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      text-decoration: none;
+      padding: 0;
+      margin-right: 50px; }
+      .headerp .sectionp .linksp ul li {
+        margin-right: 40px;
+        font-family: "Fauna One", serif;
+        font-weight: 800; }
+        .headerp .sectionp .linksp ul li a {
+          width: 90px;
+          height: 50px;
+          font-size: 20px;
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.827); }
+          .headerp .sectionp .linksp ul li a:hover {
+            color: black; }
+        .headerp .sectionp .linksp ul li .button {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          display: flex;
+          height: 50px;
+          align-items: center; }
+          .headerp .sectionp .linksp ul li .button span {
+            padding-right: 10px;
+            font-size: 20px;
+            font-family: "Fauna One", serif;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.685); }
+            .headerp .sectionp .linksp ul li .button span:hover {
+              color: black; }
+          .headerp .sectionp .linksp ul li .button .fa-cart-shopping {
+            padding: 0px 10px;
+            font-size: 20px; }
+          .headerp .sectionp .linksp ul li .button .item-counter {
+            position: absolute;
+            right: 60px;
+            background-color: #dd4444;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 0.8em; }
+  .headerp .navproductos {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+    .headerp .navproductos .navl {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding-top: 10px;
+      font-family: "Fauna One", serif;
+      font-size: 23px; }
+      .headerp .navproductos .navl li {
+        margin-right: 20px; }
+        .headerp .navproductos .navl li a {
+          text-decoration: none;
+          font-weight: 800;
+          color: rgba(0, 0, 0, 0.685); }
+          .headerp .navproductos .navl li a:hover {
+            color: black; }
+          .headerp .navproductos .navl li a span {
+            padding: 13px; }
+    .headerp .navproductos .ddmm {
+      position: absolute;
+      top: calc(100% + 10px);
+      z-index: 1100;
+      display: none;
+      background-color: white;
+      width: 1100px;
+      height: 310px;
+      border: 1px solid rgba(165, 164, 164, 0.474);
+      justify-content: space-around;
+      font-family: "Fauna One", serif;
+      margin-top: 0px;
+      margin-left: 200px; }
+      .headerp .navproductos .ddmm ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none; }
+        .headerp .navproductos .ddmm ul .titulol {
+          padding-top: 15px;
+          font-weight: 800;
+          font-size: 27px;
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.685); }
+          .headerp .navproductos .ddmm ul .titulol:hover {
+            color: black; }
+        .headerp .navproductos .ddmm ul .hr {
+          width: 90%;
+          height: 1px;
+          margin-top: 10px;
+          margin-left: 0px;
+          background-color: rgba(122, 120, 120, 0.811);
+          text-align: left; }
+        .headerp .navproductos .ddmm ul li {
+          padding-top: 5px; }
+          .headerp .navproductos .ddmm ul li a {
+            padding-top: 15px;
+            font-weight: 800;
+            font-size: 16px;
+            text-decoration: none;
+            color: rgba(86, 81, 81, 0.477); }
+            .headerp .navproductos .ddmm ul li a:hover {
+              color: #565151; }
+      .headerp .navproductos .ddmm.visible {
+        display: flex; }
+
 .breadcrumb {
   height: 200px;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center; }
-  .breadcrumb p {
-    font-size: 22px;
+  .breadcrumb .bc {
+    margin-left: 130px;
+    font-size: 20px;
     padding: 30px 20px; }
-    .breadcrumb p a {
+    .breadcrumb .bc a {
+      color: #646060;
+      font-weight: 200;
       text-decoration: none; }
-    .breadcrumb p .b {
-      background-color: white;
-      font-size: 23px;
-      color: #a39e9e;
-      border: none;
-      padding: 0px 13px;
-      cursor: pointer; }
-      .breadcrumb p .b:hover {
-        color: #090909; }
-      .breadcrumb p .b.active {
-        color: #090909; }
+      .breadcrumb .bc a:hover {
+        color: #090808; }
+  .breadcrumb .opcionesgrilla span {
+    margin-left: 13px;
+    font-size: 23px;
+    font-weight: 700; }
+  .breadcrumb .opcionesgrilla .b {
+    margin-left: 13px;
+    background-color: white;
+    font-size: 23px;
+    font-weight: 600;
+    color: #a39e9e;
+    border: none;
+    padding: 0px 13px;
+    cursor: pointer; }
+    .breadcrumb .opcionesgrilla .b:hover {
+      color: #090909; }
+    .breadcrumb .opcionesgrilla .b.active {
+      color: #090909; }
 
 .tituloi {
   margin-top: 20px;
