@@ -267,3 +267,33 @@ header {
         }
     }
 }
+.breadcrumb{
+    height: 200px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+        font-size: 22px;
+        padding: 30px 20px;
+        a{
+            text-decoration: none;
+        }
+        .b{
+            background-color: white;
+            font-size: 23px;
+            color: #a39e9e;
+            border: none;
+            padding: 0px 13px;
+            cursor: pointer;
+
+            &:hover{
+                color: #090909;
+            }
+            &.active{
+                color: #090909;
+            }
+        }
+        
+    }
+}

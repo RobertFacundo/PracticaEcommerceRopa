@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0; }
 
+body {
+  font-family: "Fauna One", serif; }
+
 header {
   display: flex;
   flex-direction: column;
@@ -180,6 +183,29 @@ header {
       height: 550px;
       width: 630px; }
 
+.breadcrumb {
+  height: 200px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .breadcrumb p {
+    font-size: 22px;
+    padding: 30px 20px; }
+    .breadcrumb p a {
+      text-decoration: none; }
+    .breadcrumb p .b {
+      background-color: white;
+      font-size: 23px;
+      color: #a39e9e;
+      border: none;
+      padding: 0px 13px;
+      cursor: pointer; }
+      .breadcrumb p .b:hover {
+        color: #090909; }
+      .breadcrumb p .b.active {
+        color: #090909; }
+
 .tituloi {
   margin-top: 20px;
   text-align: center;
@@ -327,6 +353,214 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: row; }
+  .main .filtros {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Fauna One", serif;
+    margin-left: 18px; }
+    .main .filtros .ddf {
+      flex-direction: column; }
+      .main .filtros .ddf .titulo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        font-family: "Fauna One", serif;
+        font-size: 23px;
+        margin-left: 3px;
+        padding: 13px;
+        border: none;
+        cursor: pointer; }
+        .main .filtros .ddf .titulo .flecha-arriba {
+          font-size: 24px;
+          /* Tamaño de la fuente */
+          color: #000;
+          /* Color de la flecha */ }
+          .main .filtros .ddf .titulo .flecha-arriba:hover {
+            color: #9a9494; }
+        .main .filtros .ddf .titulo p {
+          font-size: 20px;
+          font-weight: 600;
+          padding-left: 5px; }
+      .main .filtros .ddf .talles {
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-family: "Fauna One", serif;
+        padding-bottom: 13px; }
+        .main .filtros .ddf .talles .bt {
+          background-color: white;
+          color: #3f3c3c;
+          border: none;
+          cursor: pointer;
+          margin: 3px;
+          padding: 10px;
+          font-size: 23px;
+          font-weight: 200;
+          border: 1px solid #ccc;
+          transition: all 0.2s ease-in-out; }
+          .main .filtros .ddf .talles .bt:hover {
+            background-color: #3f3c3c;
+            color: white; }
+        .main .filtros .ddf .talles.mostrar {
+          display: flex;
+          /* Muestra los talles */ }
+      .main .filtros .ddf .marcas, .main .filtros .ddf .colores, .main .filtros .ddf .materiales {
+        display: none;
+        flex-direction: column; }
+        .main .filtros .ddf .marcas .marca-label, .main .filtros .ddf .marcas .color-label, .main .filtros .ddf .marcas .material-label, .main .filtros .ddf .colores .marca-label, .main .filtros .ddf .colores .color-label, .main .filtros .ddf .colores .material-label, .main .filtros .ddf .materiales .marca-label, .main .filtros .ddf .materiales .color-label, .main .filtros .ddf .materiales .material-label {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          cursor: pointer; }
+          .main .filtros .ddf .marcas .marca-label input[type="checkbox"], .main .filtros .ddf .marcas .color-label input[type="checkbox"], .main .filtros .ddf .marcas .material-label input[type="checkbox"], .main .filtros .ddf .colores .marca-label input[type="checkbox"], .main .filtros .ddf .colores .color-label input[type="checkbox"], .main .filtros .ddf .colores .material-label input[type="checkbox"], .main .filtros .ddf .materiales .marca-label input[type="checkbox"], .main .filtros .ddf .materiales .color-label input[type="checkbox"], .main .filtros .ddf .materiales .material-label input[type="checkbox"] {
+            margin-right: 10px;
+            cursor: pointer; }
+          .main .filtros .ddf .marcas .marca-label .brand-name, .main .filtros .ddf .marcas .marca-label .color-name, .main .filtros .ddf .marcas .marca-label .material-name, .main .filtros .ddf .marcas .color-label .brand-name, .main .filtros .ddf .marcas .color-label .color-name, .main .filtros .ddf .marcas .color-label .material-name, .main .filtros .ddf .marcas .material-label .brand-name, .main .filtros .ddf .marcas .material-label .color-name, .main .filtros .ddf .marcas .material-label .material-name, .main .filtros .ddf .colores .marca-label .brand-name, .main .filtros .ddf .colores .marca-label .color-name, .main .filtros .ddf .colores .marca-label .material-name, .main .filtros .ddf .colores .color-label .brand-name, .main .filtros .ddf .colores .color-label .color-name, .main .filtros .ddf .colores .color-label .material-name, .main .filtros .ddf .colores .material-label .brand-name, .main .filtros .ddf .colores .material-label .color-name, .main .filtros .ddf .colores .material-label .material-name, .main .filtros .ddf .materiales .marca-label .brand-name, .main .filtros .ddf .materiales .marca-label .color-name, .main .filtros .ddf .materiales .marca-label .material-name, .main .filtros .ddf .materiales .color-label .brand-name, .main .filtros .ddf .materiales .color-label .color-name, .main .filtros .ddf .materiales .color-label .material-name, .main .filtros .ddf .materiales .material-label .brand-name, .main .filtros .ddf .materiales .material-label .color-name, .main .filtros .ddf .materiales .material-label .material-name {
+            font-weight: bold; }
+          .main .filtros .ddf .marcas .marca-label .counter, .main .filtros .ddf .marcas .color-label .counter, .main .filtros .ddf .marcas .material-label .counter, .main .filtros .ddf .colores .marca-label .counter, .main .filtros .ddf .colores .color-label .counter, .main .filtros .ddf .colores .material-label .counter, .main .filtros .ddf .materiales .marca-label .counter, .main .filtros .ddf .materiales .color-label .counter, .main .filtros .ddf .materiales .material-label .counter {
+            margin-left: auto;
+            color: #777; }
+        .main .filtros .ddf .marcas.mostrar, .main .filtros .ddf .colores.mostrar, .main .filtros .ddf .materiales.mostrar {
+          display: flex; }
+      .main .filtros .ddf .precio {
+        display: none;
+        flex-direction: column; }
+        .main .filtros .ddf .precio .slider {
+          position: relative; }
+          .main .filtros .ddf .precio .slider #minPrice,
+          .main .filtros .ddf .precio .slider #maxPrice {
+            margin: 0 10px; }
+          .main .filtros .ddf .precio .slider input[type="range"] {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 10px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.2s; }
+            .main .filtros .ddf .precio .slider input[type="range"]:hover {
+              opacity: 1; }
+            .main .filtros .ddf .precio .slider input[type="range"]::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: #313932;
+              cursor: pointer; }
+            .main .filtros .ddf .precio .slider input[type="range"]::-moz-range-thumb {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: #4caf50;
+              cursor: pointer; }
+        .main .filtros .ddf .precio.mostrar {
+          display: block; }
+  .main .grid2 {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Cuatro columnas iguales */
+    grid-template-rows: repeat(4, auto);
+    /* Cuatro filas automáticas */
+    gap: 20px;
+    /* Espacio entre las celdas del grid */ }
+    .main .grid2 .producto {
+      width: 100%;
+      height: 388px;
+      display: flex;
+      flex-direction: column; }
+      .main .grid2 .producto .p-img {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        border-right: 1px solid rgba(0, 0, 0, 0.074);
+        border-left: 1px solid rgba(0, 0, 0, 0.075); }
+        .main .grid2 .producto .p-img .off {
+          position: absolute;
+          z-index: 1000;
+          transition: opacity 0.2s ease-in-out;
+          opacity: 1;
+          /* Posiciona de forma absoluta con respecto al padre */
+          top: 0;
+          /* Lo sitúa en la parte superior */
+          left: 0;
+          /* Lo sitúa en la parte izquierda */
+          background-color: #e21010;
+          padding: 2px;
+          text-align: center;
+          color: white;
+          width: 70px;
+          height: 20px; }
+        .main .grid2 .producto .p-img .image-container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: opacity 0.2s ease-in-out; }
+          .main .grid2 .producto .p-img .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.2s ease-in-out; }
+          .main .grid2 .producto .p-img .image-container .original {
+            opacity: 1; }
+          .main .grid2 .producto .p-img .image-container .hover {
+            opacity: 0; }
+        .main .grid2 .producto .p-img .lupa {
+          position: absolute;
+          font-size: 18px;
+          right: 10px;
+          bottom: 20px;
+          width: 44px;
+          height: 44px;
+          background-color: #bab9b9;
+          color: #fff9f9;
+          border-radius: 50%;
+          pointer-events: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translateY(60px);
+          transition: all 0.2s ease-in-out;
+          opacity: 0; }
+        .main .grid2 .producto .p-img:hover .off {
+          opacity: 0; }
+        .main .grid2 .producto .p-img:hover .image-container .original {
+          opacity: 0; }
+        .main .grid2 .producto .p-img:hover .image-container .hover {
+          opacity: 1; }
+        .main .grid2 .producto .p-img:hover .lupa {
+          opacity: 1;
+          transform: translateY(0); }
+      .main .grid2 .producto .p-info {
+        width: 300px;
+        padding: 10px;
+        font-family: "Fauna One", serif;
+        font-size: 18px; }
+        .main .grid2 .producto .p-info .p-titulo {
+          text-decoration: none;
+          font-weight: 800;
+          color: rgba(0, 0, 0, 0.625); }
+          .main .grid2 .producto .p-info .p-titulo:hover {
+            color: rgba(0, 0, 0, 0.885); }
+        .main .grid2 .producto .p-info .p-precio {
+          padding-top: 10px;
+          font-weight: 100;
+          color: rgba(238, 39, 39, 0.837); }
+          .main .grid2 .producto .p-info .p-precio:hover {
+            color: #ee2727; }
 
 .footer {
   height: 406px;

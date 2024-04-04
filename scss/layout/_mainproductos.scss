@@ -1,0 +1,317 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .filtros {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+
+        font-family: "Fauna One", serif;
+        margin-left: 18px;
+
+        .ddf {
+            flex-direction: column;
+
+            .titulo {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                font-family: "Fauna One", serif;
+                font-size: 23px;
+                margin-left: 3px;
+                padding: 13px;
+                border: none;
+                cursor: pointer;
+
+                .flecha-arriba {
+                    font-size: 24px;
+                    /* Tamaño de la fuente */
+                    color: #000;
+
+                    /* Color de la flecha */
+                    &:hover {
+                        color: #9a9494;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding-left: 5px;
+                }
+            }
+
+            .talles {
+                display: none;
+                flex-direction: row;
+                flex-wrap: wrap;
+                font-family: "Fauna One", serif;
+                padding-bottom: 13px;
+
+                .bt {
+                    background-color: white;
+                    color: rgb(63, 60, 60);
+                    border: none;
+                    cursor: pointer;
+                    margin: 3px;
+                    padding: 10px;
+                    font-size: 23px;
+                    font-weight: 200;
+                    border: 1px solid #ccc;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+                        background-color: rgb(63, 60, 60);
+                        color: white;
+                    }
+
+                }
+
+                &.mostrar {
+                    display: flex;
+                    /* Muestra los talles */
+                }
+            }
+
+            .marcas, .colores, .materiales {
+                display: none;
+                flex-direction: column;
+            
+                .marca-label, .color-label, .material-label {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+            
+                    input[type="checkbox"] {
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+            
+                    .brand-name, .color-name, .material-name {
+                        font-weight: bold;
+                    }
+            
+                    .counter {
+                        margin-left: auto;
+                        color: #777;
+                    }
+                }
+            
+                &.mostrar {
+                    display: flex;
+                }
+            }
+
+            .precio {
+                display: none;
+                flex-direction: column;
+
+                .slider {
+                    position: relative;
+
+                    #minPrice,
+                    #maxPrice {
+                        margin: 0 10px;
+                    }
+
+                    input[type="range"] {
+                        width: 100%;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        height: 10px;
+                        border-radius: 5px;
+                        background: #d3d3d3;
+                        outline: none;
+                        opacity: 0.7;
+                        transition: opacity 0.2s;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            background: #313932;
+                            cursor: pointer;
+                        }
+
+                        &::-moz-range-thumb {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            background: #4caf50;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+
+                &.mostrar {
+                    display: block;
+                }
+
+            }
+
+            
+
+        }
+    }
+
+    .grid2 {
+        margin-top: 50px;
+        margin-left: 50px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* Cuatro columnas iguales */
+        grid-template-rows: repeat(4, auto);
+        /* Cuatro filas automáticas */
+        gap: 20px;
+        /* Espacio entre las celdas del grid */
+
+        .producto {
+            width: 100%;
+            height: 388px;
+            display: flex;
+            flex-direction: column;
+
+            .p-img {
+                position: relative;
+                height: 300px;
+                width: 300px;
+                border-right: 1px solid rgba(0, 0, 0, 0.074);
+                border-left: 1px solid rgba(0, 0, 0, 0.075);
+
+                .off {
+                    position: absolute;
+                    z-index: 1000;
+                    transition: opacity 0.2s ease-in-out;
+                    opacity: 1;
+                    ; // Asegura que el span esté visible inicial
+                    /* Posiciona de forma absoluta con respecto al padre */
+                    top: 0;
+                    /* Lo sitúa en la parte superior */
+                    left: 0;
+                    /* Lo sitúa en la parte izquierda */
+                    background-color: rgb(226, 16, 16);
+                    padding: 2px;
+                    text-align: center;
+                    color: white;
+                    width: 70px;
+                    height: 20px;
+
+                }
+
+
+                .image-container {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.2s ease-in-out; // Añade una transición suave para la opacidad de las imágenes
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transition: opacity 0.2s ease-in-out; // Añade una transición suave para la opacidad
+                    }
+
+
+                    .original {
+                        opacity: 1; // Hace que la imagen original sea visible por defecto
+                    }
+
+                    .hover {
+                        opacity: 0;
+                    }
+                }
+
+                .lupa {
+                    position: absolute;
+                    font-size: 18px;
+                    right: 10px;
+                    bottom: 20px;
+                    width: 44px;
+                    height: 44px;
+                    background-color: rgb(186, 185, 185);
+                    color: #fff9f9;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    display: flex;
+                    justify-content: center; // Centra horizontalmente
+                    align-items: center; // Centra verticalmente
+
+                    transform: translateY(60px);
+                    transition: all 0.2s ease-in-out;
+                    opacity: 0;
+                }
+
+                &:hover {
+
+                    .off {
+                        opacity: 0;
+                    }
+
+                    .image-container {
+
+                        // Hace que las imágenes aparezcan al pasar el mouse
+                        .original {
+                            opacity: 0;
+                        }
+
+                        .hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    .lupa {
+                        opacity: 1; // Hace que la lupa aparezca al pasar el mouse
+                        transform: translateY(0);
+                    }
+                }
+
+            }
+
+            .p-info {
+                width: 300px;
+                padding: 10px;
+                // height: auto;
+                font-family: "Fauna One", serif;
+                font-size: 18px;
+
+
+
+                .p-titulo {
+                    text-decoration: none;
+                    font-weight: 800;
+                    color: rgba(0, 0, 0, 0.625);
+
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.885);
+                    }
+                }
+
+                .p-precio {
+                    padding-top: 10px;
+                    font-weight: 100;
+                    color: rgba(238, 39, 39, 0.837);
+
+                    &:hover {
+                        color: rgb(238, 39, 39);
+                    }
+                }
+            }
+        }
+
+    }
+}
