@@ -1,0 +1,341 @@
+.main-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 40px;
+
+    .container {
+        position: relative;
+        width: 50%;
+        margin-left: 60px;
+
+
+        .mySlides {
+            display: none;
+
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            img {
+                width: 100%;
+                border-left: solid 1px rgba(197, 195, 195, 0.771);
+                border-right: solid 1px rgba(197, 195, 195, 0.771);
+            }
+
+            // Estilos para el ícono de búsqueda
+            .fa-search {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 13px;
+                font-size: 23px;
+                color: rgb(255, 246, 246);
+                border-radius: 50%;
+                background-color: rgb(123, 119, 119); // Color de fondo inicial
+                transition: background-color 0.3s; // Transición suave para el color de fondo
+                cursor: pointer;
+            }
+
+            // Estilos para el ícono de búsqueda al hacer hover
+            .fa-search:hover {
+                background-color: rgb(51, 49, 49); // Color de fondo al hacer hover
+            }
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%; // Cambiar el porcentaje para que esté centrado verticalmente
+            transform: translateY(-50%); // Centrar verticalmente con translateY
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            user-select: none;
+            -webkit-user-select: none;
+
+            &.prev {
+                left: 0;
+                border-radius: 3px 0 0 3px;
+                background-color: rgba(0, 0, 0, 0.5); // Añadir un color de fondo para mayor visibilidad
+            }
+
+            &.next {
+                right: 0;
+                border-radius: 0 3px 3px 0;
+                background-color: rgba(0, 0, 0, 0.5); // Añadir un color de fondo para mayor visibilidad
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+
+
+
+        }
+
+        .prev-thumbnails,
+        .next-thumbnails {
+            position: absolute;
+            top: 90%; // Centra verticalmente las flechas
+
+            background-color: rgba(0, 0, 0, 0.5); // Color de fondo para mayor visibilidad
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        .prev-thumbnails {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next-thumbnails {
+            right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .row {
+            overflow: hidden;
+
+            .column {
+                float: left;
+                width: 16.66%;
+                cursor: pointer;
+
+                .demo {
+                    opacity: 1;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+
+                &:hover {
+                    border-top: solid 1px rgba(197, 195, 195, 0.771);
+                }
+            }
+        }
+
+        .active {
+            opacity: 1;
+        }
+    }
+
+    .product-details {
+        width: 50%;
+        display: flex;
+        margin-left: 20px;
+        flex-direction: column;
+        color: #333; // Color de texto predeterminado
+        filter: grayscale(100%); // Convertir a escala de grises por defecto
+        transition: filter 0.3s ease; // Transición suave al aplicar filtros
+    
+        &:hover {
+            filter: grayscale(0%); // Eliminar escala de grises al hacer hover
+        }
+    
+        h2 {
+            // Estilos para el título del producto
+            font-size: 24px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            color: #000; // Color de texto para título
+        }
+    
+        .price {
+            // Estilos para el precio
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            
+            .current-price {
+                // Estilos para el precio actual
+                color: #000; // Color de texto para precio actual
+            }
+    
+            .original-price {
+                // Estilos para el precio original tachado
+                color: #999; // Color de texto para precio original
+                text-decoration: line-through;
+            }
+        }
+    
+        .installments {
+            // Estilos para la información de cuotas
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    
+        .options {
+            // Estilos para las opciones de tamaño, color, etc.
+            margin-bottom: 10px;
+    
+            .size-options, .color-options {
+                // Estilos para las opciones de tamaño y color
+                margin-bottom: 10px;
+    
+                p {
+                    // Estilos para las etiquetas "TALLE |" y "COLOR |"
+                    font-size: 16px;
+                    padding-bottom: 10px;
+                    margin-bottom: 5px;
+                    color: #666; // Color de texto para etiquetas
+                }
+    
+                .sizes {
+                    // Estilos para los botones de tamaño
+                    display: flex;
+    
+                    .size-btn {
+                        // Estilos para cada botón de tamaño
+                        font-size: 14px;
+                        padding: 5px 20px;
+                        margin-right: 10px;
+                        border: 1px solid #ccc;
+                        background-color: #fff;
+                        color: #666; // Color de texto para botones de tamaño
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+    
+                        &:hover {
+                            background-color: #f0f0f0; // Cambiar color de fondo al hacer hover
+                        }
+                    }
+                }
+            }
+    
+            .quantity-selector {
+                // Estilos para el selector de cantidad
+                display: flex;
+                align-items: center;
+    
+                .quantity-btn {
+                    // Estilos para los botones de incremento y decremento
+                    font-size: 18px;
+                    padding: 5px 10px;
+                    border: 1px solid #ccc;
+                    background-color: #fff;
+                    color: #666; // Color de texto para botones de cantidad
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+    
+                    &:hover {
+                        background-color: #f0f0f0; // Cambiar color de fondo al hacer hover
+                    }
+                }
+    
+                .quantity-input {
+                    // Estilos para el campo de entrada de cantidad
+                    width: 50px;
+                    margin: 0 10px;
+                    padding: 5px;
+                    border: 1px solid #ccc;
+                    background-color: #fff;
+                    color: #666; // Color de texto para campo de cantidad
+                }
+            }
+        }
+    
+        .add-to-cart-btn {
+            // Estilos para el botón "Añadir al carrito"
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 30px;
+            border: none;
+            background-color: #000;
+            color: #fff; // Color de texto para botón "Añadir al carrito"
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+    
+            &:hover {
+                background-color: #333; // Cambiar color de fondo al hacer hover
+            }
+        }
+    
+        .shipping-info {
+            // Estilos para la información de envío
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            margin-top: 10px;
+    
+            i {
+                // Estilos para el icono de envío
+                margin-right: 5px;
+                color: #000; // Color de icono de envío
+            }
+    
+            h4 {
+                // Estilos para el texto de envío gratis
+                margin: 0;
+                color: #000; // Color de texto para envío gratis
+            }
+        }
+    
+        hr {
+            // Estilos para la línea horizontal
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    
+        .product-description {
+            // Estilos para la descripción del producto
+            flex-direction: column;
+            font-size: 16px;
+            color: #666; // Color de texto para descripción
+            margin-bottom: 20px;
+            
+            width: 100%;
+            
+    
+            .toggle-description-btn {
+                // Estilos para el botón de mostrar/ocultar descripción
+                font-size: 23px;
+                padding: 5px 10px;
+              float: right;
+              margin-right: 30px;
+                background-color: white;
+                border: none;
+                color: #666; // Color de texto para botón de descripción
+                cursor: pointer;
+                transition: color 0.3s ease;
+    
+                &:hover {
+                    color: #141313; // Color de texto para botón de descripción
+                }
+            }
+    
+            .full-description {
+                // Estilos para la descripción completa (oculta por defecto)
+                display: none;
+                margin-top: 20px;
+                &.mostrar{
+                    display: block;
+                }
+            }
+        }
+    }
+}

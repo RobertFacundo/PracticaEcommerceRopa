@@ -11,6 +11,7 @@
     <script src="./js/dropdownfiltros.js"></script>
     <script src="./js/contadorfiltros.js"></script>
     <script src="./js/gridlist.js"></script>
+    <script src="./js/filtrotalle.js"></script>
     <link rel="icon" type="image/png" href="./multimedia/shopping-bag.png">
     <title>E-Commerce</title>
 </head>
@@ -116,11 +117,11 @@
     </header>
     <section class="breadcrumb">
         <p class="bc"><a href="./index.html">Inicio</a>| Productos</p>
-        <p class="opcionesgrilla"><span>VER COMO &rarr;</span> <button id="gridButton" class="b"><i class="fa-solid fa-table-cells"></i></button> <button
-                id="listButton" class="b"><i class="fa-solid fa-list"></i></button></p>
+       
     </section>
     <main class="main">
         <div class="filtros">
+            <button onclick="borrarFiltros()">Borrar filtros</button>
             <section class="ddf">
                 <div class="titulo" onclick="toggleElement('talles')">
                     <div class="flecha-arriba" id="flecha">&#9650;</div>
@@ -230,8 +231,8 @@
             </section>
         </div>
         <section class="grid2">
-            <div class="producto">
-                <a href="" class="p-img">
+            <div class="producto" data-talle="39">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -240,13 +241,30 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
+                </section>
+            </div>
+            <div class="producto" data-talle="39">
+                <a href="./item.html" class="p-img">
+                    <span class="off">39% OFF</span>
+                    <div class="image-container">
+                        <img class="original" src="./multimedia/zapatilla.png" alt="">
+                        <img class="hover" src="./multimedia/hover.png" alt="">
+                    </div class="image-container">
+                    <i class="fa fa-search lupa"></i>
+                </a>
+                <section class="p-info">
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
+                    <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -255,13 +273,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -270,13 +289,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -285,13 +305,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -300,13 +321,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -315,13 +337,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -330,13 +353,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -345,13 +369,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -360,13 +385,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -375,13 +401,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -390,13 +417,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -405,13 +433,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -420,13 +449,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -435,13 +465,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -450,13 +481,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -465,13 +497,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -480,13 +513,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -495,13 +529,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
+                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort
+                        durante todo el día.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -510,29 +545,14 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
-                    <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
-                    <p>Confeccionadas con materiales de alta calidad, estas zapatillas garantizan durabilidad y confort durante todo el día.</p>
-                </section>
-            </div>
-            <div class="producto">
-                <a href="" class="p-img">
-                    <span class="off">39% OFF</span>
-                    <div class="image-container">
-                        <img class="original" src="./multimedia/zapatilla.png" alt="">
-                        <img class="hover" src="./multimedia/hover.png" alt="">
-                    </div class="image-container">
-                    <i class="fa fa-search lupa"></i>
-                </a>
-                <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni ipsum saepe eum explicabo
                         officiis consectetur! Dolores cumque aperiam fugit ipsa.</p>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -541,12 +561,12 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -555,12 +575,12 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -569,12 +589,12 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
                 </section>
             </div>
             <div class="producto">
-                <a href="" class="p-img">
+                <a href="./item.html" class="p-img">
                     <span class="off">39% OFF</span>
                     <div class="image-container">
                         <img class="original" src="./multimedia/zapatilla.png" alt="">
@@ -583,7 +603,7 @@
                     <i class="fa fa-search lupa"></i>
                 </a>
                 <section class="p-info">
-                    <a href="" class="p-titulo">Zapatillas</a>
+                    <a href="./item.html" class="p-titulo">Zapatillas</a>
                     <div class="p-precio">$139.999,00 <del>$179.999,00</del></div>
                 </section>
             </div>

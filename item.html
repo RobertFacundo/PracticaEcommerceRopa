@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/8adb0d4670.js" crossorigin="anonymous"></script>
+    <script src="./js/dropdownmenu.js"></script>
+    <script src="./js/scrollmenu.js"></script>
+    <script src="./js/dropdownfiltros.js"></script>
+    <script src="./js/contadorfiltros.js"></script>
+    <script src="./js/gridlist.js"></script>
+    <script src="./js/filtrotalle.js"></script>
+    <script src="./js/slideritems.js"></script>
+    <script src=".js/descripcionproducto.js"></script>
+    <link rel="icon" type="image/png" href="./multimedia/shopping-bag.png">
+    <title>E-Commerce</title>
+</head>
+
+<body>
+    <header class="headerp">
+        <div class="topbarp">
+            <p class="p">Disfrutá de nuestros super descuentos &#x1F525;</p>
+        </div>
+        <section class="sectionp">
+            <div class="logop">
+                <a href=""><img src="./multimedia/logo.png" alt=""></a>
+            </div class="logop">
+            <div class="searchp">
+                <input class="inputp" type="text" placeholder="Buscar">
+                <i class="fa fa-search"></i>
+            </div class="searchp">
+            <div class="linksp">
+                <ul>
+                    <li>
+                        <a href="">Cuenta</a>
+                    </li>
+                    <li>
+                        <button class="button">
+                            <span>Mi Carrito</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="item-counter">0</span> <!-- Contador de elementos en el carrito -->
+                        </button>
+                    </li>
+                </ul>
+            </div class="links">
+        </section>
+        <nav class="navproductos">
+            <ul class="navl">
+                <li><a id="m" href="">Mujer<span>˅</span></a></li>
+                <li><a id="h" href="">Hombre<span>˅</span></a></li>
+                <li><a href="">Colegial</a></li>
+                <li><a href="">Outlet</a></li>
+                <li><a href="">Tiendas</a></li>
+            </ul>
+            <section id="ddmm" class="ddmm">
+                <ul>
+                    <a class="titulol" href="">CALZADO</a>
+                    <hr class="hr">
+                    <li><a href="">Zapatillas</a></li>
+                    <li><a href="">Botas</a></li>
+                    <li><a href="">Zapatos de vestir</a></li>
+                    <li><a href="">Sandalias</a></li>
+                    <li><a href="">Alpargatas</a></li>
+                    <li><a href="">Mocasines</a></li>
+                    <li><a href="">Botines</a></li>
+                    <li><a href="">Chinelas</a></li>
+                    <li><a href="">Zapatos deportivos</a></li>
+                </ul>
+                <ul>
+                    <a class="titulol" href="">BOLSOS</a>
+                    <hr class="hr">
+                    <li><a href="">Bolso de mano</a></li>
+                    <li><a href="">Mochila</a></li>
+                    <li><a href="">Bandolera</a></li>
+                    <li><a href="">Cartera</a></li>
+                    <li><a href="">Bolso de hombro</a></li>
+                    <li><a href="">Cartera</a></li>
+                    <li><a href="">Matero</a></li>
+                    <li><a href="">Billetera</a></li>
+                    <li><a href="">Bolso de viaje</a></li>
+                </ul>
+                <ul>
+                    <a class="titulol" href="">INDUMENTARIA</a>
+                    <hr class="hr">
+                    <li><a href="">Remeras</a></li>
+                    <li><a href="">Pantalones</a></li>
+                    <li><a href="">Vestidos</a></li>
+                    <li><a href="">Camisas</a></li>
+                    <li><a href="">Polleras</a></li>
+                    <li><a href="">Buzos</a></li>
+                    <li><a href="">Jeans</a></li>
+                    <li><a href="">Trajes de baño</a></li>
+                    <li><a href="">Ropa deportiva</a></li>
+                </ul>
+                <ul>
+                    <a class="titulol" href="">ACCESORIOS</a>
+                    <hr class="hr">
+                    <li><a href="">Bufandas</a></li>
+                    <li><a href="">Gorros</a></li>
+                    <li><a href="">Guantes</a></li>
+                    <li><a href="">Collares</a></li>
+                    <li><a href="">Pulseras</a></li>
+                </ul>
+                <ul>
+                    <a class="titulol" href="">MISCELANIAS</a>
+                    <hr class="hr">
+                    <li><a href="">Decoración para el hogar</a></li>
+                    <li><a href="">Juguetes</a></li>
+                    <li><a href="">Artículos de papelería</a></li>
+                    <li><a href="">Productos de belleza</a></li>
+                    <li><a href="">Artículos de viaje</a></li>
+                    <li><a href="">Accesorios para mascotas</a></li>
+                </ul>
+            </section>
+        </nav>
+
+    </header>
+    <section class="breadcrumb">
+        <p class="bc"><a href="./index.html">Inicio</a>| Productos</p>
+        <p class="opcionesgrilla"><span>VER COMO &rarr;</span> <button id="gridButton" class="b"><i
+                    class="fa-solid fa-table-cells"></i></button> <button id="listButton" class="b"><i
+                    class="fa-solid fa-list"></i></button></p>
+    </section>
+
+    <main class="main-item">
+        <div class="container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="./multimedia/zapatilla.png" style="width:100%">
+                <i class="fa fa-search lupa"></i>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="./multimedia/hover.png" style="width:100%">
+                <i class="fa fa-search lupa"></i>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="./multimedia/zapatillaslider.png" style="width:100%">
+                <i class="fa fa-search lupa"></i>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="./multimedia/zapatillaslider2.png" style="width:100%">
+                <i class="fa fa-search lupa"></i>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="./multimedia/zapatillaslider3.png" style="width:100%">
+                <i class="fa fa-search lupa"></i>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="./multimedia/zapatillaslider4.png" style="width:100%">
+                <i class="fa fa-search lupa"></i>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+
+            <div class="row">
+                <a class="prev-thumbnails" onclick="plusSlidesThumbnails(-1)">❮</a>
+                <div class="column">
+                    <img class="demo cursor" src="./multimedia/zapatilla.png" style="width:100%"
+                        onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./multimedia/hover.png" style="width:100%" onclick="currentSlide(2)"
+                        alt="Cinque Terre">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./multimedia/zapatillaslider.png" style="width:100%"
+                        onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./multimedia/zapatillaslider2.png" style="width:100%"
+                        onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./multimedia/zapatillaslider3.png" style="width:100%"
+                        onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./multimedia/zapatillaslider4.png" style="width:100%"
+                        onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+
+                <a class="next-thumbnails" onclick="plusSlidesThumbnails(1)">❯</a>
+            </div>
+        </div>
+        <div class="product-details">
+            <h2>ZAPATILLAS VANS</h2>
+            <div class="price">
+                <span class="current-price">$139.999,00</span>
+                <del class="original-price">$179.999,00</del>
+            </div>
+            <p class="installments">6 CUOTAS CON INTERÉS</p>
+            <div class="options">
+                <div class="size-options">
+                    <p>TALLE |</p>
+                    <div class="sizes">
+                        <button class="size-btn">35</button>
+                        <button class="size-btn">36</button>
+                        <button class="size-btn">37</button>
+                        <button class="size-btn">38</button>
+                        <button class="size-btn">39</button>
+                        <button class="size-btn">40</button>
+                        <button class="size-btn">41</button>
+                        <button class="size-btn">12</button>
+                        <!-- Agregar los otros botones de talle -->
+                    </div>
+                </div>
+                <div class="color-options">
+                    <p>COLOR |</p>
+                    <!-- Agregar opciones de color -->
+                </div>
+                <div class="quantity-selector">
+                    <button class="quantity-btn decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="quantity-btn increase">+</button>
+                </div>
+            </div>
+            <button class="add-to-cart-btn">Añadir al carrito</button>
+            <div class="shipping-info">
+                <i class="fa-solid fa-truck"></i>
+                <h4>ENVIO GRATIS</h4>
+            </div>
+            <hr>
+            <div class="product-description">
+                <p>Descripción del producto<button class="toggle-description-btn" onclick="toggleDescription()">+</button></p>
+                <div class="full-description" >
+                    <p>Esta es la descripción completa del producto. Aquí puedes incluir todos los detalles,
+                        características y especificaciones relevantes. Puedes añadir texto, imágenes, enlaces, etc.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-sec">
+            <h3>Suscribite al Newsletter</h3>
+            <p>Suscribite para recibir ofertas y novedades en tu e-mail</p>
+
+            <section>
+                <input type="text" placeholder="E-mail">
+            </section>
+
+            <section class="iconos">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </section>
+        </div>
+        <div class="footer-sec">
+            <h3>Shop</h3>
+            <ul>
+                <a href="">
+                    <li>Remeras</li>
+                </a>
+                <a href="">
+                    <li>Camperas</li>
+                </a>
+                <a href="">
+                    <li>Pantalones</li>
+                </a>
+                <a href="">
+                    <li>Jeans</li>
+                </a>
+                <a href="">
+                    <li>Vestidos</li>
+                </a>
+                <a href="">
+                    <li>Camisas</li>
+                </a>
+                <a href="">
+                    <li>Bufandas</li>
+                </a>
+                <a href="">
+                    <li>Gorros</li>
+                </a>
+                <a href="">
+                    <li>Guantes</li>
+                </a>
+            </ul>
+        </div>
+        <div class="footer-sec">
+            <h3>Shop</h3>
+            <ul>
+                <a href="">
+                    <li>Contacto</li>
+                </a>
+                <a href="">
+                    <li>Preguntas Frecuentes</li>
+                </a>
+                <a href="">
+                    <li>Envíos y Devoluciones</li>
+                </a>
+                <a href="">
+                    <li>Políticas de Privacidad</li>
+                </a>
+                <a href="">
+                    <li>Términos y Condiciones</li>
+                </a>
+                <a href="">
+                    <li>Guía de Tallas</li>
+                </a>
+                <a href="">
+                    <li>Formas de Pago</li>
+                </a>
+                <a href="">
+                    <li>Cambios y Garantías</li>
+                </a>
+                <a href="">
+                    <li>Atención al Cliente</li>
+                </a>
+            </ul>
+        </div>
+        <div class="footer-sec">
+            <h3>Robert</h3>
+            <ul>
+                <a href="">
+                    <li>Institucional</li>
+                </a>
+                <a href="">
+                    <li>Tiendas</li>
+                </a>
+                <a href="">
+                    <li>Ser parte</li>
+                </a>
+                <a href="">
+                    <li>Ventas corporativas</li>
+                </a>
+            </ul>
+        </div>
+        <div class="footer-img">
+            <a href=""><img class="dataimg" src="./multimedia/Data-fiscal-Web.jpg" alt=""></a>
+            <h3>Desarrollado por</h3>
+            <a href=""><img src="./multimedia/logo.png" alt=""></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
