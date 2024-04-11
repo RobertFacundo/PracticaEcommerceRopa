@@ -23,12 +23,108 @@ header {
 
     .section {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding: 15px 0px;
         height: 137px;
 
+        .menu-icon {
+            display: none;
+            /* Ocultar el icono del menú en pantallas grandes */
+        }
 
+        .mhamb {
+            display: none;
+            position: absolute;
+            padding-top: 18px;
+            top: 0;
+            left: 0;
+            /* Alinea el menú a la izquierda */
+            z-index: 1000;
+            /* Z-index alto para que aparezca encima de otros elementos */
+            background-color: white;
+            max-width: 331px;
+            /* Ancho máximo */
+            height: 640px;
+            /* Altura automática */
+            border: 1px solid rgba(165, 164, 164, 0.474);
+            font-family: "Fauna One", serif;
+            overflow-y: auto;
+            /* Agrega un scroll vertical si el contenido es demasiado largo */
+            /* Flexbox para disposición en columnas */
+            flex-direction: column;
+
+            .close-icon {
+                position: absolute;
+                font-size: 20px;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            ul {
+                flex: 1;
+                /* Ocupa todo el espacio restante */
+                list-style-type: none;
+                padding: 0;
+                padding-left: 5px;
+                margin: 0;
+
+                .titulol {
+                    padding: 15px 0;
+                    font-weight: 800;
+                    font-size: 27px;
+                    text-decoration: none;
+                    color: rgba(0, 0, 0, 0.685);
+
+                    &:hover {
+                        color: rgb(0, 0, 0);
+                    }
+                }
+
+                .hr {
+                    width: 90%;
+                    height: 1px;
+                    margin: 10px 0;
+                    background-color: rgba(122, 120, 120, 0.811);
+                }
+
+                li {
+                    padding: 5px 0;
+
+                    a {
+                        padding: 15px 0;
+                        font-weight: 800;
+                        font-size: 16px;
+                        text-decoration: none;
+                        color: rgba(86, 81, 81, 0.477);
+
+                        &:hover {
+                            color: rgb(86, 81, 81);
+                        }
+                    }
+                }
+            }
+
+            &.visible {
+                display: block;
+            }
+
+            /* Estilos del scrollbar */
+            &::-webkit-scrollbar {
+                width: 7px; // Ancho del scrollbar
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1; // Color de fondo del scrollbar track
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #888; // Color del scrollbar thumb (el botón que se desplaza)
+                border-radius: 5px; // Borde redondeado del scrollbar thumb
+            }
+        }
 
         .logo {
 
@@ -117,17 +213,18 @@ header {
                         .fa-cart-shopping {
                             padding: 0px 10px;
                             font-size: 20px; // Ajusta el tamaño del icono según sea necesario
-                        }
 
-                        .item-counter {
-                            // display: none;
-                            position: absolute; // Posiciona el contador de elementos
-                            right: 60px; // Ajusta la posición horizontal del contador
-                            background-color: rgb(221, 68, 68); // Color de fondo del contador
-                            color: white; // Color de texto del contador
-                            border-radius: 50%; // Estilo de borde redondeado
-                            padding: 5px; // Espacio alrededor del contenido del contador
-                            font-size: 0.8em; // Tamaño del texto del contador
+
+                            .item-counter {
+                                // display: none;
+                                position: absolute; // Posiciona el contador de elementos
+                                right: 60px; // Ajusta la posición horizontal del contador
+                                background-color: rgb(221, 68, 68); // Color de fondo del contador
+                                color: white; // Color de texto del contador
+                                border-radius: 50%; // Estilo de borde redondeado
+                                padding: 5px; // Espacio alrededor del contenido del contador
+                                font-size: 0.8em; // Tamaño del texto del contador
+                            }
                         }
                     }
                 }
@@ -136,7 +233,7 @@ header {
     }
 
     // Opcional: Agregar estilos para el menú de navegación
-    .nav{
+    .nav {
         position: relative;
         justify-content: center;
         display: flex;
@@ -263,6 +360,162 @@ header {
             img {
                 height: 550px;
                 width: 630px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    header {
+        .section {
+            justify-content: space-evenly;
+
+            .menu-icon {
+                display: block;
+                /* Mostrar el icono del menú en pantallas pequeñas */
+                margin-left: 20px;
+                font-size: 27px;
+                cursor: pointer;
+            }
+
+
+
+            // .mhamb {
+            //     display: none;
+            //     position: absolute;
+            //     top: calc(100% + 10px);
+            //     left: 10px;
+            //     /* Alinea el menú a la izquierda */
+            //     z-index: 1000;
+            //     /* Z-index alto para que aparezca encima de otros elementos */
+            //     display: none;
+            //     background-color: white;
+            //     width: 30%;
+            //     /* Ancho del 30% */
+            //     max-width: 300px;
+            //     /* Ancho máximo */
+            //     height: auto;
+            //     /* Altura automática */
+            //     border: 1px solid rgba(165, 164, 164, 0.474);
+            //     font-family: "Fauna One", serif;
+            //     overflow-y: auto;
+            //     /* Agrega un scroll vertical si el contenido es demasiado largo */
+
+            //     /* Flexbox para disposición en columnas */
+
+            //     flex-direction: column;
+
+            //     .close-icon {
+            //         position: absolute;
+            //         top: 10px;
+            //         right: 10px;
+            //         cursor: pointer;
+            //         color: rgba(0, 0, 0, 0.5);
+            //     }
+
+            //     ul {
+            //         flex: 1;
+            //         /* Ocupa todo el espacio restante */
+            //         list-style-type: none;
+            //         padding: 0;
+            //         margin: 0;
+
+            //         .titulol {
+            //             padding: 15px 0;
+            //             font-weight: 800;
+            //             font-size: 27px;
+            //             text-decoration: none;
+            //             color: rgba(0, 0, 0, 0.685);
+
+            //             &:hover {
+            //                 color: rgb(0, 0, 0);
+            //             }
+            //         }
+
+            //         .hr {
+            //             width: 90%;
+            //             height: 1px;
+            //             margin: 10px 0;
+            //             background-color: rgba(122, 120, 120, 0.811);
+            //         }
+
+            //         li {
+            //             padding: 5px 0;
+
+            //             a {
+            //                 padding: 15px 0;
+            //                 font-weight: 800;
+            //                 font-size: 16px;
+            //                 text-decoration: none;
+            //                 color: rgba(86, 81, 81, 0.477);
+
+            //                 &:hover {
+            //                     color: rgb(86, 81, 81);
+            //                 }
+            //             }
+            //         }
+            //     }
+
+            //     &.visible {
+            //         display: block;
+            //     }
+            // }
+
+
+            .logo {
+                img {
+                    padding-right: 5px;
+                }
+            }
+
+            .search {
+                display: none;
+            }
+
+            .links {
+                ul {
+                    flex-direction: column;
+                    margin-right: 10px;
+
+                    li {
+                        .button {
+                            .fa-cart-shopping {
+                                .item-counter {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav {
+            display: none;
+
+        }
+
+        .buffer {
+            position: relative;
+            z-index: 1;
+
+            margin-top: 30px;
+            margin-bottom: 0px;
+            width: 100%;
+            height: auto;
+            /* Cambiado a auto para permitir que el alto sea dinámico */
+            display: flex;
+            flex-direction: column;
+            /* Cambiado a columna para que las imágenes se ubiquen en columna */
+
+            a {
+                img {
+                    max-width: 100%;
+                    /* Cambiado a un ancho máximo del 100% para que las imágenes sean responsivas */
+                    height: auto;
+                    /* Cambiado a auto para que la altura se ajuste proporcionalmente */
+                }
             }
         }
     }

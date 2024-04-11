@@ -212,3 +212,29 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr; // Cambia a una sola columna cuando el ancho de la pantalla es menor o igual a 992px
+        align-items: center;
+    }
+
+    .buffer2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .buffer3{
+        display: flex;
+        flex-direction: column;
+        height:auto;
+    }
+    .buffer4{
+        display: flex;
+        flex-direction: column;
+        height:auto;
+    }
+    
+}

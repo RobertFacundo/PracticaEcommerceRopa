@@ -8,6 +8,7 @@
     align-items: flex-start;
     justify-content: center;
     font-family: "Fauna One", serif;
+    overflow-x: hidden;
 
     .footer-sec {
         padding: 10px;
@@ -78,9 +79,25 @@
                 float: center;
                 padding-top: 30px;
             }
+
+            img{
+                width: 80px;
+            }
         }
         h3{
             padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-left: 8px;
+        .footer-sec {
+            width: 100%;
         }
     }
 }

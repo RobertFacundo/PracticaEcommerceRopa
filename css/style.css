@@ -5,7 +5,17 @@
   padding: 0; }
 
 body {
-  font-family: "Fauna One", serif; }
+  font-family: "Fauna One", serif;
+  /* Estilo del scrollbar */ }
+  body::-webkit-scrollbar {
+    width: 10px; }
+  body::-webkit-scrollbar-track {
+    background: #f1f1f1; }
+  body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px; }
+  body::-webkit-scrollbar-thumb:hover {
+    background: #555; }
 
 header {
   display: flex;
@@ -26,10 +36,80 @@ header {
       padding-top: px; }
   header .section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 15px 0px;
     height: 137px; }
+    header .section .menu-icon {
+      display: none;
+      /* Ocultar el icono del menú en pantallas grandes */ }
+    header .section .mhamb {
+      display: none;
+      position: absolute;
+      padding-top: 18px;
+      top: 0;
+      left: 0;
+      /* Alinea el menú a la izquierda */
+      z-index: 1000;
+      /* Z-index alto para que aparezca encima de otros elementos */
+      background-color: white;
+      max-width: 331px;
+      /* Ancho máximo */
+      height: 640px;
+      /* Altura automática */
+      border: 1px solid rgba(165, 164, 164, 0.474);
+      font-family: "Fauna One", serif;
+      overflow-y: auto;
+      /* Agrega un scroll vertical si el contenido es demasiado largo */
+      /* Flexbox para disposición en columnas */
+      flex-direction: column;
+      /* Estilos del scrollbar */ }
+      header .section .mhamb .close-icon {
+        position: absolute;
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.5); }
+      header .section .mhamb ul {
+        flex: 1;
+        /* Ocupa todo el espacio restante */
+        list-style-type: none;
+        padding: 0;
+        padding-left: 5px;
+        margin: 0; }
+        header .section .mhamb ul .titulol {
+          padding: 15px 0;
+          font-weight: 800;
+          font-size: 27px;
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.685); }
+          header .section .mhamb ul .titulol:hover {
+            color: black; }
+        header .section .mhamb ul .hr {
+          width: 90%;
+          height: 1px;
+          margin: 10px 0;
+          background-color: rgba(122, 120, 120, 0.811); }
+        header .section .mhamb ul li {
+          padding: 5px 0; }
+          header .section .mhamb ul li a {
+            padding: 15px 0;
+            font-weight: 800;
+            font-size: 16px;
+            text-decoration: none;
+            color: rgba(86, 81, 81, 0.477); }
+            header .section .mhamb ul li a:hover {
+              color: #565151; }
+      header .section .mhamb.visible {
+        display: block; }
+      header .section .mhamb::-webkit-scrollbar {
+        width: 7px; }
+      header .section .mhamb::-webkit-scrollbar-track {
+        background: #f1f1f1; }
+      header .section .mhamb::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px; }
     header .section .logo img {
       padding: 23px;
       height: 50px;
@@ -92,14 +172,14 @@ header {
           header .section .links ul li .button .fa-cart-shopping {
             padding: 0px 10px;
             font-size: 20px; }
-          header .section .links ul li .button .item-counter {
-            position: absolute;
-            right: 60px;
-            background-color: #dd4444;
-            color: white;
-            border-radius: 50%;
-            padding: 5px;
-            font-size: 0.8em; }
+            header .section .links ul li .button .fa-cart-shopping .item-counter {
+              position: absolute;
+              right: 60px;
+              background-color: #dd4444;
+              color: white;
+              border-radius: 50%;
+              padding: 5px;
+              font-size: 0.8em; }
   header .nav {
     position: relative;
     justify-content: center;
@@ -182,6 +262,43 @@ header {
     header .buffer a img {
       height: 550px;
       width: 630px; }
+
+@media screen and (max-width: 1300px) {
+  header .section {
+    justify-content: space-evenly; }
+    header .section .menu-icon {
+      display: block;
+      /* Mostrar el icono del menú en pantallas pequeñas */
+      margin-left: 20px;
+      font-size: 27px;
+      cursor: pointer; }
+    header .section .logo img {
+      padding-right: 5px; }
+    header .section .search {
+      display: none; }
+    header .section .links ul {
+      flex-direction: column;
+      margin-right: 10px; }
+      header .section .links ul li .button .fa-cart-shopping .item-counter {
+        display: none; }
+  header .nav {
+    display: none; }
+  header .buffer {
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+    /* Cambiado a auto para permitir que el alto sea dinámico */
+    display: flex;
+    flex-direction: column;
+    /* Cambiado a columna para que las imágenes se ubiquen en columna */ }
+    header .buffer a img {
+      max-width: 100%;
+      /* Cambiado a un ancho máximo del 100% para que las imágenes sean responsivas */
+      height: auto;
+      /* Cambiado a auto para que la altura se ajuste proporcionalmente */ } }
 
 .headerp {
   display: flex;
@@ -527,6 +644,24 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    align-items: center; }
+  .buffer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; }
+  .buffer3 {
+    display: flex;
+    flex-direction: column;
+    height: auto; }
+  .buffer4 {
+    display: flex;
+    flex-direction: column;
+    height: auto; } }
 
 .main {
   width: 100%;
@@ -1045,7 +1180,8 @@ header {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  font-family: "Fauna One", serif; }
+  font-family: "Fauna One", serif;
+  overflow-x: hidden; }
   .footer .footer-sec {
     padding: 10px;
     margin: 0px 30px; }
@@ -1092,5 +1228,16 @@ header {
       height: 50px;
       float: center;
       padding-top: 30px; }
+    .footer .footer-img a img {
+      width: 80px; }
     .footer .footer-img h3 {
       padding: 30px; }
+
+@media (max-width: 992px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-left: 8px; }
+    .footer .footer-sec {
+      width: 100%; } }
