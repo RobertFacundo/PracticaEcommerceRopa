@@ -369,17 +369,24 @@ header {
 @media screen and (max-width: 1300px) {
     header {
         .section {
-            justify-content: space-evenly;
+            justify-content: space-around;
 
             .menu-icon {
                 display: block;
                 /* Mostrar el icono del menú en pantallas pequeñas */
-                margin-left: 20px;
+                margin-left: 40px;
                 font-size: 27px;
                 cursor: pointer;
             }
 
+            .logo {
 
+                img {
+                    padding: 23px;
+                    height: auto;
+                    width: 185px; // Establece el ancho máximo del logo
+                }
+            }
 
             // .mhamb {
             //     display: none;
